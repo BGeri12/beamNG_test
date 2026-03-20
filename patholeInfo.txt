@@ -1,0 +1,5 @@
+material window:
+Kátyú: AsphaltRoad_damage_sml_decal_01d
+	id: 109, 110
+baseColorMap - Path: /art/decals/t_asphalt_pothole_decal_b.color.png
+gameengine.zip-ben van
