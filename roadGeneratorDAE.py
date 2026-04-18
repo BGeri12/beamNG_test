@@ -5,10 +5,17 @@ import re
 
 hossz = 10.0      
 szelesseg = 7.0   
-felbontas = 0.025 
 
-x = np.arange(-szelesseg/2, szelesseg/2, felbontas)
-y = np.arange(0, hossz, felbontas)
+x_bal = np.arange(-szelesseg/2, 0.5, 0.5)
+x_katyu = np.arange(0.5, 2.5, 0.025)
+x_jobb = np.arange(2.5, (szelesseg/2) + 0.1, 0.5)
+x = np.unique(np.concatenate((x_bal, x_katyu, x_jobb)))
+
+y_eleje = np.arange(0, 4.0, 0.5)
+y_katyu = np.arange(4.0, 6.0, 0.025)
+y_vege = np.arange(6.0, hossz + 0.1, 0.5)
+y = np.unique(np.concatenate((y_eleje, y_katyu, y_vege)))
+
 X, Y = np.meshgrid(x, y)
 
 Z_alap = -np.abs(X) * 0.025
@@ -58,7 +65,6 @@ for i in range(u_meret - 1):
 aktualis_mappa = os.path.dirname(os.path.abspath(__file__))
 fajlnev = os.path.join(aktualis_mappa, 'ut_katyuval.dae').replace('\\', '/')
 
-# <--- ÚJ RÉSZ: Háló létrehozása, UV és Normálvektorok hozzáadása
 mesh = trimesh.Trimesh(vertices=vertices, faces=faces, process=False)
 mesh.visual = trimesh.visual.TextureVisuals(uv=uvs)
 mesh.fix_normals() 
