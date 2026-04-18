@@ -1,0 +1,15 @@
+{
+  "asphalt_mesh_road": {
+    "name": "asphalt_mesh_road",
+    "mapTo": "asphalt_mesh_road",
+    "class": "Material",
+    "version": 1.5,
+    "Stages": [
+      {
+        "baseColorMap": "/levels/automation_test_track/art/shapes/roads/t_asphalt_meshroad_b.color.png"
+      }
+    ],
+    "groundType": "Asphalt",
+    "frictionProfile": "asphalt"
+  }
+}
