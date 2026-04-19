@@ -4,6 +4,7 @@
     "mapTo": "asphalt_mesh_road",
     "class": "Material",
     "version": 1.5,
+    "useVertexColors": true,
     "Stages": [
       {
         "baseColorMap": "/levels/automation_test_track/art/shapes/roads/t_asphalt_meshroad_b.color.png"
@@ -11,5 +12,18 @@
     ],
     "groundType": "Asphalt",
     "frictionProfile": "asphalt"
+  },
+  
+  "road_damage_01": {
+    "name": "road_damage_01",
+    "mapTo": "road_damage_01",
+    "class": "Material",
+    "version": 1.5,
+    "translucent": true,
+    "Stages": [
+      {
+        "baseColorMap": "katyu.png"
+      }
+    ]
   }
 }

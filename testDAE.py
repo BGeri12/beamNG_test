@@ -2,6 +2,7 @@ import os
 import random
 from beamngpy import BeamNGpy, Scenario, Vehicle
 from beamngpy import ScenarioObject
+from beamngpy import StaticObject
 
 bng_home = r'C:\Program Files\BeamNG\BeamNG.tech.v0.38.3.0'
 bng = BeamNGpy('localhost', 64256, home=bng_home)
@@ -24,6 +25,15 @@ procedural_ut = ScenarioObject(
     decalType='None'
     )
 scenario.add_object(procedural_ut)
+
+matrica_obj = StaticObject(
+    name='katyu_repedes',
+    pos=(1.5, 5.0, 0.35), 
+    rot_quat=(0, 0, 0, 1),
+    scale=(1, 1, 1),
+    shape='/levels/smallgrid/art/shapes/test/matrica.dae' 
+    )
+scenario.add_object(matrica_obj) 
 
 scenario.add_vehicle(vehicle, pos=(0, 0, 1.0), rot_quat=(0, 0, 0, 1))
 
